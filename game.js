@@ -2,6 +2,13 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
 const startScreen = document.getElementById("start-screen");
 const startButton = document.getElementById("start-button");
 const gameOverScreen = document.getElementById("game-over-screen");
@@ -15,7 +22,7 @@ let score = 0;
 let highscore = 0;
 
 const gravity = 0.25;
-const jumpStrength = -5.2;
+const jumpStrength = -0.02 * window.innerHeight;
 let velocity = 0;
 let phoneY = canvas.height / 2;
 
@@ -75,10 +82,7 @@ function updatePipes() {
     if (!pipe.passed && pipe.x + pipeWidth < 100) {
       score++;
       pipe.passed = true;
-
-      if (score % 10 === 0) {
-        pipeSpeed += 0.3;
-      }
+      if (score % 10 === 0) pipeSpeed += 0.3;
     }
   });
   pipes = pipes.filter(pipe => pipe.x + pipeWidth > 0);
