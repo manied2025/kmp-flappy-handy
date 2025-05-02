@@ -6,26 +6,31 @@ html, body {
   font-family: Arial, sans-serif;
   background: #b3e5fc;
   height: 100%;
+  width: 100%;
 }
 
 canvas {
-  display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
 }
 
 #start-screen, #game-over-screen {
-  position: absolute;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
+  position: fixed;
+  width: 90%;
+  max-width: 500px;
   left: 50%;
   transform: translateX(-50%);
-  top: 15%;
+  top: 10%;
   padding: 20px;
   display: none;
-  z-index: 10;
+  z-index: 2;
+  background: rgba(255,255,255,0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
 #start-screen.active, #game-over-screen.active {
@@ -33,11 +38,7 @@ canvas {
 }
 
 #instructions, #gameover-message {
-  margin: 20px auto;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  margin-top: 10px;
 }
 
 #logo {
