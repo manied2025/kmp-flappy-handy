@@ -38,9 +38,9 @@ phoneImage.src = "images/handy.png";
 
 let pipes = [];
 const pipeWidth = 70;
-const pipeGap = 200;
-let pipeSpeed = 1.5;
-let pipeInterval = 120;
+const pipeGap = 240;
+let pipeSpeed = 1.2;
+let pipeInterval = 140;
 let frameCount = 0;
 
 let clouds = [
