@@ -22,7 +22,7 @@ let score = 0;
 let highscore = 0;
 
 const gravity = 0.25;
-const jumpStrength = -8; // constant pixel jump
+const jumpStrength = -6.5; // constant pixel jump
 let velocity = 0;
 let phoneY = canvas.height / 2;
 

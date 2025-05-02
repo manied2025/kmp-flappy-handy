@@ -3,7 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   background: #b3e5fc;
   height: 100%;
   width: 100%;
@@ -25,17 +25,24 @@ canvas {
   left: 50%;
   transform: translateX(-50%);
   top: 10%;
-  padding: 20px;
+  padding: 30px 20px;
   display: none;
   z-index: 2;
-  background: rgba(255,255,255,0.95);
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.85);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
   text-align: center;
+  animation: fadeIn 0.6s ease;
 }
 
 #start-screen.active, #game-over-screen.active {
   display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -10%); }
+  to { opacity: 1; transform: translate(-50%, 0); }
 }
 
 #instructions, #gameover-message {
@@ -45,30 +52,30 @@ canvas {
 
 #logo {
   width: 160px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
 .fancy-button {
-  padding: 12px 24px;
+  padding: 14px 28px;
   font-size: 18px;
   border: none;
-  border-radius: 8px;
-  background: linear-gradient(145deg, #4CAF50, #45A049);
+  border-radius: 12px;
+  background: linear-gradient(to right, #4CAF50, #66BB6A);
   color: white;
-  box-shadow: 0 6px #2d6a35;
+  box-shadow: 0 8px #388E3C;
   transition: all 0.2s ease;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .fancy-button:hover {
-  background: linear-gradient(145deg, #5cd65c, #4CAF50);
+  background: linear-gradient(to right, #66BB6A, #81C784);
 }
 
 .fancy-button:active {
-  box-shadow: 0 2px #2d6a35;
-  transform: translateY(4px);
+  box-shadow: 0 4px #2e7d32;
+  transform: translateY(3px);
 }
