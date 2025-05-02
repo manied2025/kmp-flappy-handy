@@ -7,6 +7,10 @@ html, body {
   background: #b3e5fc;
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 canvas {
@@ -23,8 +27,8 @@ canvas {
   width: 90%;
   max-width: 500px;
   left: 50%;
+  transform: translateX(-50%);
   top: 10%;
-  transform: translate(-50%, 0);
   padding: 20px;
   display: none;
   z-index: 2;
@@ -40,11 +44,15 @@ canvas {
 
 #instructions, #gameover-message {
   margin-top: 10px;
+  text-align: center;
 }
 
 #logo {
   width: 160px;
   margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .fancy-button {
@@ -57,6 +65,7 @@ canvas {
   box-shadow: 0 6px #2d6a35;
   transition: all 0.2s ease;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .fancy-button:hover {

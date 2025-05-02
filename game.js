@@ -22,7 +22,7 @@ let score = 0;
 let highscore = 0;
 
 const gravity = 0.25;
-const jumpStrength = -0.015 * window.innerHeight;
+const jumpStrength = -0.012 * window.innerHeight;
 let velocity = 0;
 let phoneY = canvas.height / 2;
 
