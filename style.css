@@ -1,0 +1,70 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background: #b3e5fc;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+  background: #b3e5fc;
+  max-width: 100%;
+  height: auto;
+}
+
+#start-screen, #game-over-screen {
+  position: absolute;
+  width: 100%;
+  top: 15%;
+  padding: 20px;
+  display: none;
+  z-index: 10;
+}
+
+#start-screen.active, #game-over-screen.active {
+  display: block;
+}
+
+#instructions, #gameover-message {
+  margin: 20px auto;
+  width: 85%;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+#game-over-screen {
+  background: rgba(255,255,255,0.95);
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+#logo {
+  width: 160px;
+  margin-bottom: 10px;
+}
+
+.fancy-button {
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #4CAF50, #45A049);
+  color: white;
+  box-shadow: 0 6px #2d6a35;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.fancy-button:hover {
+  background: linear-gradient(145deg, #5cd65c, #4CAF50);
+}
+
+.fancy-button:active {
+  box-shadow: 0 2px #2d6a35;
+  transform: translateY(4px);
+}
