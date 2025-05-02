@@ -16,6 +16,7 @@ canvas {
   width: 100vw;
   height: 100vh;
   z-index: 0;
+  border: 5px solid red; /* DEBUG: sichtbarer Rahmen */
 }
 
 #start-screen, #game-over-screen {
@@ -28,12 +29,12 @@ canvas {
   padding: 30px 20px;
   display: none;
   z-index: 2;
-  backdrop-filter: blur(10px);
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.95);
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
   text-align: center;
   animation: fadeIn 0.6s ease;
+  border: 2px solid #4CAF50; /* DEBUG: sichtbarer Rahmen */
 }
 
 #start-screen.active, #game-over-screen.active {
@@ -56,6 +57,7 @@ canvas {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  border: 2px dashed orange; /* DEBUG: Rahmen sichtbar */
 }
 
 .fancy-button {
@@ -69,6 +71,7 @@ canvas {
   transition: all 0.2s ease;
   cursor: pointer;
   margin-top: 20px;
+  border: 3px solid black; /* DEBUG: Button sichtbar umranden */
 }
 
 .fancy-button:hover {

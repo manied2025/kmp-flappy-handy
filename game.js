@@ -22,7 +22,14 @@ let score = 0;
 let highscore = 0;
 
 const gravity = 0.25;
-const jumpStrength = -6.5; // constant pixel jump
+let jumpStrength = -8;
+resizeCanvas = function() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  jumpStrength = Math.max(-5, -canvas.height * 0.012);
+};
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas); // constant pixel jump
 let velocity = 0;
 let phoneY = canvas.height / 2;
 
