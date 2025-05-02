@@ -38,9 +38,9 @@ phoneImage.src = "images/handy.png";
 
 let pipes = [];
 const pipeWidth = 70;
-const pipeGap = 160;
-let pipeSpeed = 2.2;
-let pipeInterval = 90;
+const pipeGap = 200;
+let pipeSpeed = 1.5;
+let pipeInterval = 120;
 let frameCount = 0;
 
 let clouds = [
@@ -89,7 +89,7 @@ function updatePipes() {
     if (!pipe.passed && pipe.x + pipeWidth < 100) {
       score++;
       pipe.passed = true;
-      if (score % 10 === 0) pipeSpeed += 0.3;
+      // Schwierigkeit bleibt gleich
     }
   });
   pipes = pipes.filter(pipe => pipe.x + pipeWidth > 0);

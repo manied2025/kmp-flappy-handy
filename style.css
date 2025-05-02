@@ -16,7 +16,6 @@ canvas {
   width: 100vw;
   height: 100vh;
   z-index: 0;
-  border: 5px solid red; /* DEBUG: sichtbarer Rahmen */
 }
 
 #start-screen, #game-over-screen {
@@ -29,12 +28,12 @@ canvas {
   padding: 30px 20px;
   display: none;
   z-index: 2;
-  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(12px);
+  background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(240,248,255,0.95));
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
   text-align: center;
   animation: fadeIn 0.6s ease;
-  border: 2px solid #4CAF50; /* DEBUG: sichtbarer Rahmen */
 }
 
 #start-screen.active, #game-over-screen.active {
@@ -57,7 +56,6 @@ canvas {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border: 2px dashed orange; /* DEBUG: Rahmen sichtbar */
 }
 
 .fancy-button {
@@ -71,7 +69,6 @@ canvas {
   transition: all 0.2s ease;
   cursor: pointer;
   margin-top: 20px;
-  border: 3px solid black; /* DEBUG: Button sichtbar umranden */
 }
 
 .fancy-button:hover {
@@ -81,4 +78,27 @@ canvas {
 .fancy-button:active {
   box-shadow: 0 4px #2e7d32;
   transform: translateY(3px);
+}
+
+#gameover-message p {
+  font-size: 20px;
+  color: #333;
+  font-weight: 500;
+  margin: 0.5em 0;
+}
+
+#gameover-message a {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 20px;
+  background: #00bcd4;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+#gameover-message a:hover {
+  background: #0097a7;
 }
